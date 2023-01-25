@@ -37,3 +37,22 @@ run in the terminal after setup
 ansible-playbook main-remote.yml -i inventory --private-key [file].pem
 ```
 
+Prerequisite:
+
+* A linux EC2 instance with port 3000 open for the inbound access.
+* Public IP address of an EC2 instance in your AWS account.
+* Inventory file
+* A key pair to connect your EC2 instance
+
+#### Files related to the exercise
+```
+├── main-remote.yml     # Playbook file
+├── inventory.txt 
+└── roles
+    └── setup
+        ├── files
+        │   └── index.js
+        └── tasks
+            └── main.yml
+
+```
